@@ -1,0 +1,24 @@
+1. Why did you choose a HashMap for storing the product information? What are its benefits
+compared to other data structures?
+
+A HashMap is ideal for storing product information because of its Efficient Insertions and Updates like Adding or Updating product entries by ID is also efficient, making it easy to manage stock levels as products come in and out.
+Simple Management of Unique Keys: Since each product has a unique ID, a HashMap naturally enforces this requirement, avoiding potential duplicates.
+In addition, a HashMap offers average O(1) time complexity for retrievals by key.
+
+
+2. How does using an ArrayList for daily shipments help in maintaining the order of arrivals?
+
+The ArrayList data structure is an excellent choice because It keeps elements in the order they are added, which is ideal for recording the exact sequence of product arrivals in shipments. Also, It is easy to append: Adding a new shipment item to the list is efficient.
+
+
+3. What changes would you make if the products needed to be sorted by both name and ID?
+
+I Would use a TreeMap because it allows to sort elements by ID in an ascending way.
+
+
+
+4. What would you do differently if products could have non-unique IDs or if shipments had
+to be tracked with timestamps?
+
+Use an ArrayList or a database to store products with duplicate IDs and scan through the list when looking up by ID.
+TreeMap with Timestamp as Key: If timestamps need to be sorted or queried, we could use a TreeMap where the key is the timestamp, and the value is the list of product IDs in that shipment.
